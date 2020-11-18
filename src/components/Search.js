@@ -42,17 +42,18 @@ function Search() {
 export default Search
 
 const SearchDatePicker = styled.div`
-	position: absolute;
-	top: 35px;
-	/* left: 25%; */
-	width: 100vw;
+	position: fixed;
+	top: 175px;
+	left: 25%;
+	/* margin-left: 25px; */
+	width: 560px;
 `;
 
 const Title = styled.h2`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 560px;
+	width: 99.8%;
 	padding: 10px;
 	background-color: white;
 	position: absolute;
@@ -61,10 +62,10 @@ const Title = styled.h2`
 `;
 
 const NumberInput = styled.input`
-	width: 540px;
-	padding: 20px;
+	width: 99.8%;
+	padding: 10px;
 	position: absolute;
-	left: 0;
+	/* left: 0; */
 	height: 30px;
 	top: 400px;
 	border: none;
@@ -78,9 +79,9 @@ const NumberInput = styled.input`
 const SearchButton = styled(Button)`
     position: absolute !important; 
     left: 0;
-    top: 465px;
+    top: 450px;
     text-transform: inherit !important;
     background-color: #ff7779 !important;
     color: white !important;
-    width: 580px;
+    width: 579px;
 `;
