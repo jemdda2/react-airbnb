@@ -27,26 +27,30 @@ function Search() {
 
 	return (
 		<>
-		<SearchDatePicker>
-			<DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
-			<Title>
-				Number of guests <PeapleIcon />
-			</Title>
-			<NumberInput min={0} defaultValue={2} type="number" />
-			<SearchButton>Search Airbnb</SearchButton>
-		</SearchDatePicker>
-			</>
+			<SearchDatePicker>
+				<DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
+				<Title>
+					Number of guests <PeapleIcon />
+				</Title>
+				<NumberInput min={0} defaultValue={2} type="number" />
+				<SearchButton onClick={() => history.push('/search')}>Search Airbnb</SearchButton>
+			</SearchDatePicker>
+		</>
 	)
 }
 
 export default Search
 
 const SearchDatePicker = styled.div`
-	position: fixed;
-	top: 175px;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	top: 35px;
 	left: 25%;
 	/* margin-left: 25px; */
+	height: 380px;
 	width: 560px;
+	z-index: 1;
 `;
 
 const Title = styled.h2`
@@ -54,9 +58,9 @@ const Title = styled.h2`
 	align-items: center;
 	justify-content: space-between;
 	width: 99.8%;
-	padding: 10px;
+	padding: 20px 10px 10px 10px;
 	background-color: white;
-	position: absolute;
+	position: relative;
 	left: 0;
 	/* top: 380px; */
 `;
@@ -70,6 +74,7 @@ const NumberInput = styled.input`
 	top: 400px;
 	border: none;
 	font-size: 20px;
+	z-index: 2;
 
 	&:focus {
 		outline-width: 0;
@@ -84,4 +89,9 @@ const SearchButton = styled(Button)`
     background-color: #ff7779 !important;
     color: white !important;
     width: 579px;
+
+		&:hover {
+			background-color: white !important;
+			color: #ff7779 !important;
+		}
 `;

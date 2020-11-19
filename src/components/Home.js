@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from "styled-components/macro"
 import Banner from './Banner'
+import Section from './Section';
 
 
 
 function Home() {
 	return (
 		<div className="home">
-			<h1>Home Components</h1>
 			<Banner />
+			<Section />
 		</div>
 	)
 }
